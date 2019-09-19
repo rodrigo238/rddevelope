@@ -1,18 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  <ion-toolbar color="danger" >
     <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-buttons end>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  
+  <ion-card style="background-color: #2d52a3 !important;" *ngFor="let l of list">
+    <img src="../../assets/imgs/logo_size.png">
+      <h2 style="color:rgb(255, 255, 255); text-align: center; font-size: 16px;">{{l.dev_name}}</h2>
+      <h2 style="color:rgb(255, 255, 255); text-align: center; font-size: 16px;">{{l.mac}}</h2>
+      <p text-center >
+          <button (click)="addgraficos()" style="background-color: white; width: 60%; border-radius: 15px; color:#2d52a3 " ion-button>VER STATUS</button>
+      </p>
+      <br>
+  </ion-card>
 </ion-content>
